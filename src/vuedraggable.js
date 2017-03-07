@@ -281,8 +281,8 @@
   }
 
   if (typeof exports == "object") {
-    var Sortable =  require("sortablejs")
-    module.exports = buildDraggable(Sortable)
+    //var Sortable =  require("sortablejs")
+    module.exports = buildDraggable(window.Sortable)
   } else if (typeof define == "function" && define.amd) {
     define(['sortablejs'], function(Sortable) { return buildDraggable(Sortable);});
   } else if ( window && (window.Vue) && (window.Sortable)) {
